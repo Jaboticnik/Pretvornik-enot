@@ -10,17 +10,27 @@ const GumbPotrdi = document.getElementById("Gumb-pretvori-potrdi")
 Vnosnik.value = ""
 
 GumbPotrdi.addEventListener('click', (vrednost) => {
-    Zagon(vrednost)
+    Zagon(vrednost, "gumb")
 })
 
 Vnosnik.addEventListener('keyup', (vrednost) => {
-    Zagon(vrednost)
+    Zagon(vrednost, "tipka")
 })
 
 
 
-const Zagon = vrednost => {
-    const Stevilo = Number(vrednost.target.value)  ? Number(vrednost.target.value) : 1
+const Zagon = (vrednost, vrsta) => {
+
+    const PridobitevStevila = () => {
+        if (vrsta === "tipka") {
+            return Number(vrednost.target.value)  ? Number(vrednost.target.value) : 1
+        }else if (vrsta === "gumb") {
+            return Number(Vnosnik.value) ? Number(Vnosnik.value) : 1
+        }
+    }
+
+
+    const Stevilo = PridobitevStevila()
     Nastavivsebino(Stevilo)
 }
 
