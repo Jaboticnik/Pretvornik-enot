@@ -1,0 +1,129 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #1F2937;
+}
+
+:root {
+    /* Velikost pisave */
+    --vp-900: clamp(4.5rem, 7.5vw + 1rem, 9.375rem);
+    --vp-800: 3.5rem;
+    --vp-750: 3.5rem;
+    --vp-700: 1.9rem;
+    --vp-650: 1.4rem;
+    --vp-600: 1rem;
+    --vp-500: 1rem;
+    --vp-400: 1.1rem;
+    --vp-300: 1rem;
+    --vp-200: 0.875rem;
+}
+
+@media (min-width: 35em) {
+    :root {
+        /* Velikost pisave */
+        --vp-800: 5rem;
+        --vp-750: 5rem;
+        --vp-700: 2.5rem;
+        --vp-650: 1.6rem;
+        --vp-600: 1.5rem;
+        --vp-500: 1.25rem;
+        --vp-400: 1.3rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* Velikost pisave */
+        --vp-800: 6.25rem;
+        --vp-750: 5.3rem;
+        --vp-700: 3.5rem;
+        --vp-650: 2rem;
+        --vp-600: 2rem;
+        --vp-500: 1.75rem;
+        --vp-400: 1.4rem;
+    }
+}
+
+.vrhnjik {
+    background: #6943FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: clamp(1rem, 8vw + 1rem, 6rem);
+    color: white;
+    margin: 0;
+    row-gap: 2rem;
+}
+
+.vrhnjik > h1 {
+    font-size: var(--vp-700);
+    margin: 0;
+}
+
+.vrhnjik > input {
+    aspect-ratio: 1920 / 1080;
+    height: clamp(4rem, 8vw + 1.5rem, 7rem);
+    width: clamp(10rem, 30vw + 1.5rem, 20rem);
+    font-size: clamp(2rem, 8vw + 1.5rem, 4rem);
+    text-align: center;
+    color: inherit;
+    background: inherit;
+    border-radius: 1rem;
+    padding: .4rem;
+    border: .2rem solid #B295FF;
+}
+
+.vrhnjik > button {
+    border: none;
+    background: #FFFFFF;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: var(--vp-500);
+    padding: 1rem 3.5rem;
+    border-radius: .7rem;
+    color: #3D3D3D;
+}
+
+.vrhnjik > button:hover {
+    cursor: pointer;
+    background: #eeeeee;
+}
+
+.vrhnjik > button:active {
+    box-shadow:black 0 0 0 2px inset;
+}
+
+.nosilec-pretvorb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 0;
+    row-gap: 2rem;
+    padding: 2rem;
+}
+
+.pretvorbe {
+    text-align: center;
+    background: #273549;
+    padding: .7rem 3rem;
+    border-radius: .7rem;
+}
+
+.pretvorbe > h2 {
+    font-size: var(--vp-400);
+    color: #CCC1FF;
+}
+
+.pretvorbe > p {
+    font-size: var(--vp-300);
+}
+
+@media (min-width: 118em) {
+    .nosilec-pretvorb {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
